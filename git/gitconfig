@@ -1,0 +1,46 @@
+[commit]
+    verbose = true
+
+[core]
+    editor = vim
+
+[init]
+    defaultBranch = main
+
+[help]
+    autocorrect = prompt
+
+[merge]
+    conflictStyle = zdiff3
+
+[rebase]
+    autosquash = true
+
+[alias]
+    add-patch = add --patch
+    alias-list = config --get-regex 'alias*'
+    branch-delete = branch -d
+    branch-list = branch -a
+    branch-new = checkout -b
+    branch-rename = branch -m
+    commit-amend = commit --amend
+    # Allow user to select a commit to fixup.
+    commit-fix = "!git log -n 50 --pretty=format:'%h %s' --no-merges | fzf | cut -c -7 | xargs -o git commit --fixup"
+    commit-short = commit -m
+    count = rev-list --count
+    cherrypick = cherry-pick
+    # Like `log-one` below, but on a single file with change stats
+    log-file = log --stat --follow --format='%n%C(auto)%d %s %h' -- 
+    log-find = log -i --format='%C(auto)%d %s %h' --grep
+    log-full = log --format=full
+    log-fuller = log --format=fuller
+    log-medium = log --format=medium
+    # Like `log --oneline`, but the hashes are moved to the right.
+    log-one = log --format='%C(auto)%d %s %h'
+    log-short = log --format=short
+    rebase = rebase -i
+    remote-list = remote -v
+    st = status -sb
+    tag-list = tag
+    uncommit = reset --soft HEAD^
+    unstage = reset --mixed HEAD
