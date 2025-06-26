@@ -1,0 +1,10 @@
+# Requires SimpleloginCMD (`pipx install simplelogincmd`)
+alias sl=simplelogin
+# Requires GNU CoreUtils (`brew install coreutils`)
+alias ls='gls -1 --file-type --group-directories-first --color=auto'
+
+
+# Display the given manpage in TextEdit.
+function mant() {
+    man "$1" | col -b | open -f
+}
