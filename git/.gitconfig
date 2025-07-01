@@ -13,6 +13,9 @@
 [rebase]
     autosquash = true
 
+[user]
+    name = truthless-dev
+
 [alias]
     add-patch = add --patch
     alias-list = config --get-regex 'alias*'
