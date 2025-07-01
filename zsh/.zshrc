@@ -2,7 +2,6 @@ setopt APPEND_HISTORY
 setopt AUTO_CD
 setopt C_BASES
 setopt NO_CASE_GLOB
-setopt CORRECT
 setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_FIND_NO_DUPS
 setopt HIST_IGNORE_DUPS

@@ -3,6 +3,7 @@ alias sl=simplelogin
 # Requires GNU CoreUtils (`brew install coreutils`)
 alias ls='gls -1 --file-type --group-directories-first --color=auto'
 
+eval $(thefuck --alias)
 
 # Display the given manpage in TextEdit.
 function mant() {
