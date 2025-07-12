@@ -1,7 +1,6 @@
-PROMPT='%1~ %# '
-
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_ENV_HINTS=1
+export PROMPT='%1~ %# '
 
 if [ -f ~/.zsh_aliases ]; then
     source ~/.zsh_aliases
