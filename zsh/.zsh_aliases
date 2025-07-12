@@ -1,7 +1,13 @@
 # Requires SimpleloginCMD (`pipx install simplelogincmd`)
 alias sl=simplelogin
 # Requires GNU CoreUtils (`brew install coreutils`)
-alias ls='gls -1 --file-type --group-directories-first --color=auto'
+alias ls="gls \
+     -1 \
+    --file-type \
+    --group-directories-first \
+    --color=auto \
+    --hide=__pycache__ \
+"
 
 eval $(thefuck --alias)
 
