@@ -1,13 +1,30 @@
 # Requires SimpleloginCMD (`pipx install simplelogincmd`)
 alias sl=simplelogin
-# Requires GNU CoreUtils (`brew install coreutils`)
-alias ls="gls \
-     -1 \
-    --file-type \
-    --group-directories-first \
-    --color=auto \
-    --hide=__pycache__ \
-"
+
+if (( $+commands[eza] )); then
+    # Requires eza (`brew install eza`)
+    # Preferred for Git compatibility and a few others
+    alias ls="eza \
+        --oneline \
+        --classify=always \
+        --group-directories-first \
+        --git-ignore \
+        --color=auto \
+        --icons=never \
+    "
+elif (( $+commands[gls] )); then
+    # Requires GNU CoreUtils (`brew install coreutils`)
+    # Still better than macOS default ls, but requires manual hiding
+    alias ls="gls \
+         -1 \
+        --file-type \
+        --group-directories-first \
+        --color=auto \
+        --hide=__pycache__ \
+    "
+else
+    alias ls='ls -1 -F --color=auto'
+fi
 
 eval $(thefuck --alias)
 
