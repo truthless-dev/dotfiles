@@ -1,15 +1,19 @@
+# Library for command-line editing
+brew "readline"
+# Arbitrary precision calculator
+brew "calc"
+# Command-line tool to display information about unicode characters
+brew "chars"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@3"
+# Modern, maintained replacement for ls
+brew "eza"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
 # Command-line fuzzy finder written in Go
 brew "fzf"
-# Simple terminal UI for git commands
-brew "lazygit"
-# Cryptography and SSL/TLS Toolkit
-brew "openssl@3"
-# Library for command-line editing
-brew "readline"
 # Command-line interface for SQLite
 brew "sqlite"
 # General-purpose data compression with high compression ratio
