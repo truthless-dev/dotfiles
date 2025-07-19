@@ -1,12 +1,9 @@
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_ENV_HINTS=1
 export PROMPT='%1~ %# '
+export ZDOTDIR="${ZDOTDIR:-$HOME}"
 
-if [ -f ~/.zsh_aliases ]; then
-    source ~/.zsh_aliases
-fi
-if [[ -f "$HOME/.zsh_options" ]]; then
-    source "$HOME/.zsh_options"
-fi
+[[ -f "$ZDOTDIR/.zsh_aliases" ]] && source "$ZDOTDIR/.zsh_aliases"
+[[ -f "$ZDOTDIR/.zsh_options" ]] && source "$ZDOTDIR/.zsh_options"
 
 eval "$(pyenv init - zsh)"
