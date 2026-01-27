@@ -1,2 +1,4 @@
+.DS_Store
+
 # Ignore 1Password config - contains sensative data.
 /op/
