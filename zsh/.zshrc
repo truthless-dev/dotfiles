@@ -5,5 +5,6 @@ export ZDOTDIR="${ZDOTDIR:-$HOME}"
 
 [[ -f "$ZDOTDIR/.zsh_aliases" ]] && source "$ZDOTDIR/.zsh_aliases"
 [[ -f "$ZDOTDIR/.zsh_options" ]] && source "$ZDOTDIR/.zsh_options"
+[[ -f "$ZDOTDIR/.py-auto-venv.zsh" ]] && source "$ZDOTDIR/.py-auto-venv.zsh"
 
 eval "$(pyenv init - zsh)"
