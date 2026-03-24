@@ -1,8 +1,5 @@
-brew "autoconf"
-brew "openssl@3"
-brew "readline"
-brew "sqlite"
-brew "xz"
+# Include optional NB dependencies
+tap "xwmx/taps"
 
 brew "calc"
 brew "coreutils"
@@ -24,5 +21,6 @@ brew "thefuck"
 brew "vim"
 brew "wget"
 brew "wtf"
+brew "xwmx/taps/nb"
 
 cask "font-jetbrains-mono-nerd-font"
