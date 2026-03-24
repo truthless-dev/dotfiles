@@ -1,25 +1,6 @@
-# Requires SimpleloginCMD (`pipx install simplelogincmd`)
-alias sl=simplelogin
-
 (( $+commands[gawk] )) && alias awk=gawk
-
-
-# Simplify spell-checking directly from command line.
-# Usage: spell word1[ word2[...]]
-(( $+commands[hunspell] )) && spell() {
-    echo "$*" | hunspell | awk -F ': ' '
-
-        # Lines that start with `&` or `#` are spelling errors.
-        /^(&|#)/ {
-            split($1, parts, " ")
-
-            misspelling = parts[2]
-            corrections = $2
-            print misspelling FS corrections
-        }
-
-    '
-}
+(( $+commands[simplelogin] )) && alias sl=simplelogin
+(( $+commands[thefuck] )) && eval $(thefuck --alias)
 
 
 if (( $+commands[eza] )); then
@@ -47,7 +28,24 @@ else
     alias ls='ls -1 -F --color=auto'
 fi
 
-eval $(thefuck --alias)
+
+# Simplify spell-checking directly from command line.
+# Usage: spell word1[ word2[...]]
+(( $+commands[hunspell] )) && spell() {
+    echo "$*" | hunspell | awk -F ': ' '
+
+        # Lines that start with `&` or `#` are spelling errors.
+        /^(&|#)/ {
+            split($1, parts, " ")
+
+            misspelling = parts[2]
+            corrections = $2
+            print misspelling FS corrections
+        }
+
+    '
+}
+
 
 # Display the given manpage in TextEdit.
 function mant() {
