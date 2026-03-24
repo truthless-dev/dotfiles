@@ -3,6 +3,25 @@ alias sl=simplelogin
 
 (( $+commands[gawk] )) && alias awk=gawk
 
+
+# Simplify spell-checking directly from command line.
+# Usage: spell word1[ word2[...]]
+(( $+commands[hunspell] )) && spell() {
+    echo "$*" | hunspell | awk -F ': ' '
+
+        # Lines that start with `&` or `#` are spelling errors.
+        /^(&|#)/ {
+            split($1, parts, " ")
+
+            misspelling = parts[2]
+            corrections = $2
+            print misspelling FS corrections
+        }
+
+    '
+}
+
+
 if (( $+commands[eza] )); then
     # Requires eza (`brew install eza`)
     # Preferred for Git compatibility and a few others
