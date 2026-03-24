@@ -1,6 +1,7 @@
 # Include optional NB dependencies
 tap "xwmx/taps"
 
+brew "bats-core"
 brew "calc"
 brew "coreutils"
 brew "eza"
