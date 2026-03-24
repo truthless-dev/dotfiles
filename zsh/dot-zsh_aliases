@@ -1,6 +1,8 @@
 # Requires SimpleloginCMD (`pipx install simplelogincmd`)
 alias sl=simplelogin
 
+(( $+commands[gawk] )) && alias awk=gawk
+
 if (( $+commands[eza] )); then
     # Requires eza (`brew install eza`)
     # Preferred for Git compatibility and a few others
