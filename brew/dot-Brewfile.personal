@@ -13,6 +13,7 @@ cask "keepassxc"
 cask "pearcleaner"
 cask "textmate"
 cask "visual-studio-code"
+cask "vlc"
 
 vscode "ms-python.debugpy"
 vscode "ms-python.python"
