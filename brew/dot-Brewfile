@@ -1,10 +1,10 @@
 instance_eval(File.read(File.expand_path(".Brewfile.common", __dir__)))
 
-case ENV["MACHINE_ROLE"]
+case ENV["HOMEBREW_HOST_ROLE"]
 when "personal"
     instance_eval(File.read(File.expand_path(".Brewfile.personal", __dir__)))
 when "work"
     instance_eval(File.read(File.expand_path(".Brewfile.work", __dir__)))
     else
-    instance_eval(File.read(File.expand_path(".Brewfile.personal", __dir__)))
+    raise "Invalid HOMEBREW_HOST_ROLE (valid values: personal, work)."
 end
