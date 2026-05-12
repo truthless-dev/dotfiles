@@ -1,4 +1,5 @@
 brew "actionlint"
+brew "commitizen"
 brew "exercism"
 brew "ffmpeg"
 brew "liblouis"
