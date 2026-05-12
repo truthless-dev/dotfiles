@@ -1,6 +1,7 @@
 brew "actionlint"
 brew "commitizen"
 brew "exercism"
+brew "eye-d3"
 brew "ffmpeg"
 brew "liblouis"
 brew "roll"
