@@ -1,9 +1,12 @@
+# My own tools
+tap "truthless-dev/formulae"
 # Include optional NB dependencies
 tap "xwmx/taps"
 
 brew "bats-core"
 brew "calc"
 brew "coreutils"
+brew "truthless-dev/formulae/define"
 brew "eza"
 brew "fd"
 brew "fzf"
