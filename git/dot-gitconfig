@@ -29,14 +29,14 @@ commit-fix = "!git log -n 50 --pretty=format:'%h %s' --no-merges | fzf | cut -c 
 commit-short = commit -m
 count = rev-list --count
 cherrypick = cherry-pick
-# Like `log-one` below, but on a single file with change stats
+# Like `log --oneline`, but the hashes are moved to the right.
+log1 = log --format='%C(auto)%d %s %h'
+# Like `log1`, but on a single file with change stats
 log-file = log --stat --follow --format='%n%C(auto)%d %s %h' -- 
 log-find = log -i --format='%C(auto)%d %s %h' --grep
 log-full = log --format=full
 log-fuller = log --format=fuller
 log-medium = log --format=medium
-# Like `log --oneline`, but the hashes are moved to the right.
-log-one = log --format='%C(auto)%d %s %h'
 log-short = log --format=short
 rebase = rebase -i
 remote-list = remote -v
