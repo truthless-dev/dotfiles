@@ -10,7 +10,6 @@ if (( $+commands[eza] )); then
         --oneline \
         --classify=always \
         --group-directories-first \
-        --git-ignore \
         --color=auto \
         --icons=never \
     "
