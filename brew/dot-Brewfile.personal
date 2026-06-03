@@ -13,7 +13,6 @@ cask "1password-cli"
 cask "audacity"
 cask "keepassxc"
 cask "pearcleaner"
-cask "textmate"
 cask "visual-studio-code"
 cask "vlc"
 

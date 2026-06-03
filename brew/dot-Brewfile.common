@@ -29,4 +29,6 @@ brew "wget"
 brew "wtf"
 brew "xwmx/taps/nb"
 
+cast "textmate"
+
 cask "font-jetbrains-mono-nerd-font"
