@@ -1,4 +1,5 @@
 brew "chars"
 
+cask "claude-code"
 cask "slack"
 cask "webex"
