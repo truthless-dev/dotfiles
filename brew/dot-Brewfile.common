@@ -1,7 +1,7 @@
 # My own tools
 tap "truthless-dev/formulae", "https://github.com/truthless-dev/homebrew-formulae", trusted: true
 # Include optional NB dependencies
-tap "xwmx/taps"
+tap "xwmx/taps", "https://github.com/xwmx/homebrew-taps", trusted: true
 
 brew "bats-core"
 brew "calc"
