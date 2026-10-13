@@ -5,7 +5,7 @@ export PROMPT='%1~ %# '
 export ZDOTDIR="${ZDOTDIR:-$HOME}"
 
 [[ -f "$HOME/.host_role" ]] && source "$HOME/.host_role"
-[[ "$HOMEBREW_HOST_ROLE" == "work" ]] && source "$HOME/.work.zshrc"
+[[ -f "$HOME/.${HOMEBREW_HOST_ROLE}.zshrc" ]] && source "$HOME/.${HOMEBREW_HOST_ROLE}.zshrc"
 
 # Enable running `.pyrc` when the Py shell starts.
 [[ -f "$HOME/.pyrc" ]] && export PYTHONSTARTUP="$HOME/.pyrc"
