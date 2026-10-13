@@ -30,5 +30,6 @@ brew "xwmx/taps/nb"
 
 cask "claude-code"
 cask "textmate"
+cask "webex"
 
 cask "font-jetbrains-mono-nerd-font"

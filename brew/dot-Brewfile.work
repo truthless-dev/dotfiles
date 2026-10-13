@@ -1,4 +1,3 @@
 brew "chars"
 
 cask "slack"
-cask "webex"
