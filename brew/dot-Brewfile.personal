@@ -11,6 +11,7 @@ brew "yt-dlp"
 
 cask "1password-cli"
 cask "audacity"
+cask "dotnet-sdk"
 cask "keepassxc"
 cask "pearcleaner"
 cask "visual-studio-code"
